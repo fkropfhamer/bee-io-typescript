@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+const SRC = path.resolve(__dirname, "src", "client", "assets");
+
 module.exports = {
       entry: './src/client/js/main.ts',
       module: {
@@ -23,6 +25,11 @@ module.exports = {
           {
             test: /\.(png|svg|jpg|gif)$/,
             use: ['file-loader'],
+          },
+          {
+            test: /\.mp3$/,
+            include: SRC,
+            loader: 'file-loader'
           },
         ],
       },
