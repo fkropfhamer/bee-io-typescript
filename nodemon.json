@@ -1,0 +1,11 @@
+{
+    "ignore": [
+      "node_modules"
+    ],
+    "watch": [
+      "src",
+      "yarn.lock"
+    ],
+    "exec": "ts-node src/server/index.ts",
+    "ext": "ts"
+}
